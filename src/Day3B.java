@@ -1,3 +1,9 @@
+/**
+ * Created by DanKillen on 26/12/2022
+ * Find the item type that corresponds to the badges of each three-Elf group.
+ * What is the sum of the priorities of those item types?
+ **/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,10 +12,6 @@ import java.util.Arrays;
 
 import static java.lang.Character.isUpperCase;
 
-/**
- * Created by laptop on 26/12/2022
- * UPDATE COMMENTS ABOUT PROGRAM HERE
- **/
 public class Day3B
 {
    public static char findItem(int length1, int length2, int length3, char[] ch1, char[] ch2, char[] ch3)
@@ -34,14 +36,13 @@ public class Day3B
    }
    public static int FindPoints(char c)
    {
-      int item = (int)c;
       if (isUpperCase(c))
       {
-         return item - 38;
+         return (int)c - 38;
       }
       else
       {
-         return item - 96;
+         return (int)c - 96;
       }
    }
    public static int StringToPoints(String input1, String input2, String input3)
@@ -66,10 +67,9 @@ public class Day3B
       int w = 0;
       while ((Str = buffer.readLine()) != null)
       {
-            String Str1 = Str;
-            String Str2 = buffer.readLine();
+         String Str2 = buffer.readLine();
             String Str3 = buffer.readLine();
-            totals[w] = StringToPoints(Str1,Str2,Str3);
+            totals[w] = StringToPoints(Str,Str2,Str3);
             w++;
       }
       for (int p = 0; p < w; p++)

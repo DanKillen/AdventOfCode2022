@@ -1,3 +1,9 @@
+/**
+ * Created by DanKillen on 26/12/2022
+ * Find the item type that appears in both compartments of each rucksack.
+ * What is the sum of the priorities of those item types?
+ **/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -5,10 +11,6 @@ import java.lang.String;
 
 import static java.lang.Character.isUpperCase;
 
-/**
- * Created by laptop on 26/12/2022
- * UPDATE COMMENTS ABOUT PROGRAM HERE
- **/
 public class Day3
 {
    public static char findItem(int length, char[] ch1, char[] ch2)
@@ -27,14 +29,13 @@ public class Day3
    }
    public static int FindPoints(char c)
    {
-      int item = (int)c;
       if (isUpperCase(c))
       {
-         return item - 38;
+         return (int) c - 38;
       }
       else
       {
-         return item - 96;
+         return (int) c - 96;
       }
    }
    public static int StringToPoints(String input)
@@ -55,10 +56,8 @@ public class Day3
    {
       FileReader input = new FileReader("day3input.txt");
       BufferedReader buffer = new BufferedReader(input);
-      int[] totals = new int[500];
       int item = 0;
       String Str;
-      int length = 0;
       while ((Str = buffer.readLine()) != null)
       {
          item += StringToPoints(Str);

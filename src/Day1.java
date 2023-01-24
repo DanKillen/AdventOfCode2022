@@ -1,14 +1,13 @@
 import java.io.*;
-import java.util.Scanner;
-
 
 /**
- * Created by ${USER} on ${DATE}
- * UPDATE COMMENTS ABOUT PROGRAM HERE
+ * Created by DanKillen on 26/12/2022
+ * Find the top three Elves carrying the most Calories.
+ * How many Calories are those Elves carrying in total?
  **/
 public class Day1
 {
-   static void sort(int arr[])
+   static void sort(int[] arr)
    {
       int n = arr.length;
 
@@ -27,11 +26,11 @@ public class Day1
        }
       }
    }
-   static void printArray(int arr[])
+   static void printArray(int[] arr)
    {
-      for (int i = 0; i < arr.length; i++)
+      for (int j : arr)
       {
-         System.out.println(arr[i]);
+         System.out.println(j);
       }
    }
    public static void main(String[] args) throws IOException
@@ -58,10 +57,7 @@ public class Day1
       input.close();
 
       int[] finalTotals = new int[i + 1];
-      for (int j = 0; j <= i; j++)
-      {
-         finalTotals[j] = totals[j];
-      }
+      System.arraycopy(totals, 0, finalTotals, 0, i + 1);
       sort(finalTotals);
       printArray(finalTotals);
 

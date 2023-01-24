@@ -1,3 +1,10 @@
+/**
+ * Created by DanKillen on 26/12/2022
+ * Following the Elf's instructions for the second column,
+ * what would your total score be if everything goes exactly
+ * according to your strategy guide?
+ **/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

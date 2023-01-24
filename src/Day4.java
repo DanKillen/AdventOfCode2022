@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.Scanner;
 
 /**
- * Created by laptop on 26/12/2022
- * UPDATE COMMENTS ABOUT PROGRAM HERE
+ * Created by Dan Killen on 26/12/2022
+ * In how many assignment pairs do the ranges overlap?
  **/
 public class Day4
 {   public static void main(String[] args) throws IOException
@@ -14,22 +14,17 @@ public class Day4
    FileWriter output = new FileWriter("day4output.txt");
    BufferedReader buffer = new BufferedReader(input);
    BufferedReader buffer2 = new BufferedReader(input2);
-   BufferedWriter writer = new BufferedWriter(output);
-   {
 
-   };
-   String Str= "get";
+   String Str;
    int i = 0;
-   int[] strip = new int[4];
    int a1, a2, b1, b2;
-   a1 = a2 = b1 = b2 = 0;
    String[] space = new String[TOTAL];
    String intro;
 
    while ((Str = buffer.readLine()) != null)
    {
       Scanner scanner = new Scanner(Str);
-      scanner.useDelimiter("-|,|\\n");
+      scanner.useDelimiter("[-,\\n]");
       while (scanner.hasNext())
       {
          {
@@ -66,9 +61,9 @@ public class Day4
       search = space[x];
       search2 = space[x + 1];
       String start1 = search.substring(0,3);
-      String end1 = search.substring(search.length()-3,search.length());
+      String end1 = search.substring(search.length()-3);
       String start2 = search2.substring(0,3);
-      String end2 = search2.substring(search2.length()-3,search2.length());
+      String end2 = search2.substring(search2.length()-3);
 
          if (search2.contains(start1) || search2.contains(end1))
          {
