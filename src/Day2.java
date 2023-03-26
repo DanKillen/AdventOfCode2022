@@ -27,12 +27,6 @@ public class Day2
       }
       System.out.print(RSP.score);
    }
-
-   /**
-    * Created by laptop on 25/12/2022
-    * UPDATE COMMENTS ABOUT PROGRAM HERE
-    **/
-
    public static class RSP {
       public static int score;
       int [][] matrix = {{4,1,7},
