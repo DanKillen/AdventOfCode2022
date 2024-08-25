@@ -1,4 +1,5 @@
-package AoC2022; /**
+package AoC2022;
+/**
  * Created by Dan Killen on 28/12/2022
  * How many characters need to be processed before the first start-of-message
  * marker is detected?
