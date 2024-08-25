@@ -1,3 +1,5 @@
+package AoC2022;
+
 import java.io.*;
 
 /**

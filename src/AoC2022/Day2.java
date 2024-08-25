@@ -1,4 +1,4 @@
-/**
+package AoC2022; /**
  * Created by DanKillen on 26/12/2022
  * Following the Elf's instructions for the second column,
  * what would your total score be if everything goes exactly
